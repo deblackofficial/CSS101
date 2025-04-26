@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        #layout {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        #header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        #sidebar {
+            background-color: #f4f4f4;
+            padding: 15px;
+            width: 200px;
+        }
+        #content {
+            flex-grow: 1;
+            padding: 15px;
+        }
+        @media (max-width: 600px) {
+            #layout {
+                flex-direction: column;
+            }
+            #sidebar {
+                width: 100%;
+                order: -1; /* Sidebar on top in mobile view */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <div id="header">Header</div>
+        <div id="sidebar">Sidebar</div>
+        <div id="content">Content</div>
+    </div>
+</body>
+</html>
